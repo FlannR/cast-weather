@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cast - Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="cast.css">
+</head>
+
+<body>
+
+    <!-- Sticky Header -->
+    <header>
+        <nav>
+            <h1>Cast</h1>
+            <span>Your guide to accurate and helpful weather info</span> <!-- Change span to paragraph for better semantics -->
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#footer" onclick="toggleContactForm()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Weather Info Section -->
+    <section id="home" class="mt-24 pt-16 px-6 text-center">
+
+        <!-- Error message area -->
+        <div id="error-message" class="text-red-500 mt-4 text-lg hidden" role="alert" aria-live="assertive"></div>
+
+        <h2 class="text-3xl font-bold mb-4 glow text-blue-400">Weather with Clarity</h2>
+        <div class="flex justify-center items-center space-x-6">
+            <input id="city" type="text" placeholder="Enter city name" class="px-4 py-2 text-black rounded-lg" aria-label="Enter city name">
+            <button id="search-btn" class="bg-blue-600 hover:bg-blue-800 text-white px-4 py-2 rounded-lg" aria-label="Search weather">Search</button>
+        </div>
+
+        <!-- Weather Display -->
+        <div id="weather-info" class="mt-6 hidden">
+            <h3 class="text-2xl font-semibold" id="city-name"></h3>
+            <div class="weather-details">
+                <div id="weather-icon">
+                    <img src="" alt="Weather Icon" id="weather-icon-img">
+                </div>
+                <p id="temp"></p>
+                <p id="condition"></p>
+                <p id="wind"></p>
+                <p id="humidity"></p>
+            </div>
+
+            <!-- Weather advice -->
+            <div id="advice" class="mt-4 text-lg font-semibold" style="display: none;">
+                <p id="advice-text"></p>
+            </div>
+        </div>
+
+        <div id="loading" style="display:none;">Loading...</div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service-box">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Advice</h3>
+                <p>Get helpful tips based on the current weather, such as dressing appropriately or planning outdoor activities.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fas fa-calendar-day"></i>
+                <h3>Forecast</h3>
+                <p>Get detailed weather forecasts, including daily, weekly, and hourly predictions to plan your activities effectively.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fas fa-cloud-sun"></i>
+                <h3>Realtime</h3>
+                <p>Stay up to date with live weather conditions, including real-time temperature, humidity, wind speed, and more.</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fas fa-bell"></i>
+                <h3>Alerts</h3>
+                <p>Receive weather alerts and notifications, such as severe weather warnings, storms, and other important updates.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form (Hidden) -->
+    <section id="contact-form" class="fixed inset-0 flex justify-center items-center bg-gray-800 bg-opacity-80 hidden">
+        <div class="bg-gray-900 p-8 rounded-lg shadow-lg max-w-lg w-full text-center">
+            <h2 class="text-2xl font-bold mb-4 text-blue-400">Contact Us</h2>
+            <p class="text-lg text-gray-300 mb-4">Feel free to reach out to us through the following:</p>
+
+            <!-- Links to Gmail and LinkedIn -->
+            <div class="mb-4">
+                <a href="mailto:mcklinrzirongodza@gmail.com" class="text-blue-400 hover:text-blue-500 text-xl mb-2 block">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <a href="https://www.linkedin.com/in/mcklin-zirongodza-8b71b21a7" target="_blank" class="text-blue-400 hover:text-blue-500 text-xl block">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+
+            <!-- Close Button -->
+            <button onclick="toggleContactForm()" class="bg-red-600 hover:bg-red-800 text-white px-6 py-2 rounded-lg">Close</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&copy; 2025 Cast Weather App | Designed by <span>Mcklin.R</span></p>
+    </footer>
+
+    <script src="cast.js"></script>
+</body>
+
+</html>
