@@ -1,0 +1,348 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, rgba(0, 0, 50, 0.9), rgba(0, 50, 100, 0.9));
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(28, 28, 28, 0.9);
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #00b4cc;
+    text-shadow: 0 0 10px #00b4cc, 0 0 20px #00b4cc;
+}
+
+header span {
+    font-size: 1.2rem;
+    color: #e2e2e2;
+    font-style: italic;
+}
+
+header ul {
+    display: flex;
+    gap: 1rem;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+header ul li a:hover {
+    color: #00b4cc;
+}
+
+/* Main Weather Section */
+#home {
+    margin-top: 5rem;
+    text-align: center;
+    padding: 2rem 0;
+    background-color: rgba(0, 0, 50, 0.7); 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#home h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00b4cc;
+    text-shadow: 0 0 10px #00b4cc, 0 0 20px #00b4cc;
+}
+
+#home input {
+    padding: 0.75rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    color: #333;
+    transition: border 0.3s ease;
+}
+
+#home input:focus {
+    border-color: #00b4cc;
+}
+
+#home button {
+    padding: 0.75rem 1.5rem;
+    background-color: #00b4cc;
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#home button:hover {
+    background-color: #0098a6;
+    transform: scale(1.05);
+}
+
+/* Weather info container */
+#weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Weather icon and temperature container */
+.weather-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Weather icon */
+#weather-icon img {
+    width: 100px; 
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Temperature styling */
+#temp {
+    margin-top: 10px;
+    font-size: 2rem;
+    color: #fff;
+}
+
+/* General weather info styling */
+#weather-info p {
+    margin-top: 10px;
+    color: #d1d5db;
+}
+
+#weather-info #advice {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Initially hide the weather icon */
+#weather-icon {
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Advice Section */
+#advice {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 50, 0.7);
+}
+
+/* Services Section */
+#services {
+    padding: 4rem 2rem;
+    background-color: #333;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #00b4cc;
+    text-shadow: 0 0 10px #00b4cc, 0 0 20px #00b4cc;
+    margin-bottom: 2rem;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.service-box {
+    background-color: #444;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.service-box i {
+    font-size: 2rem;
+    color: #00b4cc;
+    margin-bottom: 1rem;
+}
+
+.service-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.service-box p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    padding: 2rem;
+    color: #f1f1f1;
+    text-align: center;
+    font-size: 1rem;
+    position: relative;
+    margin-top: 4rem;
+}
+
+footer span {
+    color: #00b4cc;
+}
+
+/* Loading Spinner */
+#loading {
+    display: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00b4cc;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    #home h2 {
+        font-size: 2rem;
+    }
+
+    #home input {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    #home button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    #services {
+        padding: 3rem 1rem;
+    }
+
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    #home h2 {
+        font-size: 1.8rem;
+    }
+
+    #home input {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    #home button {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+/* Style the scrollbar container */
+::-webkit-scrollbar {
+    width: 12px;  /* Set the width of the scrollbar */
+}
+
+/* Style the scrollbar track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;  /* Light gray background */
+    border-radius: 10px;
+}
+
+/* Style the scrollbar thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background-color: #888;  /* Darker gray for the thumb */
+    border-radius: 10px;
+    border: 3px solid #f1f1f1;  /* Add a border around the thumb */
+}
+
+/* Hover effect for the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;  /* Darker gray when hovering over the thumb */
+}
+
+/* For Firefox */
+scrollbar {
+    width: 12px;
+}
+
+scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+    border: 3px solid #f1f1f1;
+}
+
+scrollbar-thumb:hover {
+    background-color: #555;
+}
