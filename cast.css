@@ -403,24 +403,28 @@ scrollbar-thumb:hover {
     color: #00b4cc;
 }
 
-/* Header text visibility and responsiveness */
+/* General Styles for the Header Text */
 header span {
     font-size: 1.2rem;
     color: #e2e2e2;
     font-style: italic;
-    visibility: visible;
-    transition: font-size 0.3s ease;
+    white-space: nowrap;  /* Prevent line breaks */
+    margin-left: 1rem;
 }
 
-/* Media Queries */
+/* Mobile Styles for Header Text */
 @media (max-width: 768px) {
     header span {
-        font-size: 1rem; /* Adjust text size for mobile */
+        font-size: 1rem;  /* Reduce the font size on mobile */
+        text-align: center;  /* Center the text */
+        margin-left: 0;  /* Remove left margin */
     }
 }
 
+/* Very Small Screens (e.g., below 480px) */
 @media (max-width: 480px) {
     header span {
-        font-size: 0.9rem; /* Further adjust for very small screens */
+        font-size: 0.9rem;  /* Further reduce font size for very small screens */
+        display: none;  /* Optionally hide the text on small screens */
     }
 }
