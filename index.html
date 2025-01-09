@@ -16,8 +16,12 @@
     <header>
         <nav>
             <h1>Cast</h1>
-            <span>Your guide to accurate and helpful weather info</span> <!-- Change span to paragraph for better semantics -->
-            <ul>
+            <span>Your guide to accurate and helpful weather info</span>
+            <!-- Mobile Hamburger Menu Icon -->
+            <div id="hamburger-icon" class="block md:hidden cursor-pointer">
+                <i class="fas fa-bars text-2xl"></i>
+            </div>
+            <ul id="nav-links" class="hidden md:flex gap-4">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#footer" onclick="toggleContactForm()">Contact</a></li>

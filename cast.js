@@ -140,3 +140,8 @@ document.addEventListener('DOMContentLoaded', function() {
         contactForm.classList.toggle('hidden');
     };
 });
+
+
+document.getElementById('hamburger-icon').addEventListener('click', function() {
+    document.getElementById('nav-links').classList.toggle('active');
+});
